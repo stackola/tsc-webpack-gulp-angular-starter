@@ -9,14 +9,16 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/angular": "^1.6.40",
     "@types/angularjs": "^1.5.14-alpha",
+    "@types/jquery": "^3.2.18",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-es2015-destructuring": "^6.23.0",
     "babel-plugin-transform-es2015-for-of": "^6.23.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-polyfill": "^6.26.0",
-    "babel-preset-latest": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.23.5",
     "gulp": "^3.9.1",
     "gulp-less": "^3.4.0",
@@ -26,9 +28,7 @@
     "typescript": "^2.6.2",
     "webpack": "^3.10.0",
     "webpack-stream": "^4.0.0",
-    "whatwg-fetch": "^2.0.3",
-    "@types/angular": "^1.6.40",
-    "@types/jquery": "^3.2.18"
+    "whatwg-fetch": "^2.0.3"
   },
   "dependencies": {
     "angular": "^1.6.8"
