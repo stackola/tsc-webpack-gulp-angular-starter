@@ -1,4 +1,4 @@
 {
-  "presets" : ["preset-env"],
+  "presets" : ["env"],
   "plugins": ["transform-object-rest-spread", "transform-es2015-destructuring", "transform-es2015-for-of"]
 }
