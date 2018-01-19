@@ -1,6 +1,5 @@
 var gulp = require("gulp");
 var less = require("gulp-less");
-var gutil = require("gulp-util");
 var webpack = require("webpack-stream");
 var ts = require("gulp-typescript");
 var browserSync = require("browser-sync").create();
@@ -47,17 +46,6 @@ gulp.task("webpack", function() {
       })
     )
     .pipe(gulp.dest("dist/js"));
-});
-
-gulp.task("compile-ts", function() {
-  return tsProject
-    .src()
-    .pipe(tsProject())
-    .js.pipe(gulp.dest("dist/js"));
-});
-
-gulp.task("watch-ts", function() {
-  gulp.watch("./src/ts/**/*.ts", ["compile-ts"]);
 });
 
 gulp.task("serve", function() {
