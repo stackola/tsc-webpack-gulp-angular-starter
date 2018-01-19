@@ -4,8 +4,15 @@
 	<meta charset="UTF-8">
 	<title></title>
 	<link rel="stylesheet" href="css/main.css">
+
 </head>
 <body>
-	1
+	<div ng-app="myShoppingList" ng-controller="myCtrl">
+    <ul>
+        <li ng-repeat="x in products">{{x}}</li>
+    </ul>
+</div>
+	<script src="js/bundle.js"></script>
+
 </body>
 </html>

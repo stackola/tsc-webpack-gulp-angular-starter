@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/angularjs": "^1.5.14-alpha",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-es2015-destructuring": "^6.23.0",
@@ -21,9 +22,16 @@
     "gulp-less": "^3.4.0",
     "gulp-tsc": "^1.3.2",
     "gulp-typescript": "^4.0.0-alpha.1",
+    "gulp-util": "^3.0.8",
     "ts-loader": "^3.2.0",
+    "typescript": "^2.6.2",
     "webpack": "^3.10.0",
     "webpack-stream": "^4.0.0",
-    "whatwg-fetch": "^2.0.3"
+    "whatwg-fetch": "^2.0.3",
+    "@types/angular": "^1.6.40",
+    "@types/jquery": "^3.2.18"
+  },
+  "dependencies": {
+    "angular": "^1.6.8"
   }
 }
