@@ -1,12 +1,26 @@
 "use strict";
 
 import * as angular from 'angular';
-import uiRouter from "@uirouter/angularjs";
-import {StateProvider} from "@uirouter/angularjs";
-import {toggleDirective} from './directives/toggle';
-import * as filter from './filters/helper';
+//import uiRouter from '@uirouter/angularjs';
+//import {StateProvider} from '@uirouter/angularjs';
+import 'angular-animate';
+import 'angular-cookies';
+import 'angular-route';
+import 'angular-sanitize';
+import 'angular-toastr';
+import 'angular-touch';
+import 'ng-notify';
+import 'ngstorage';
+import 'pikaday-angular';
+import 'v-accordion';
 
-const app = angular.module('app', [uiRouter]);
+import * as filter from './filters/helper';
+import {toggleDirective} from './directives/toggle';
+
+const app = angular.module('app', [
+	'ngRoute', 'ngLocale', 'ngAnimate', 'ngCookies', 'ngSanitize', 'ngTouch', 'ngStorage',
+	'vAccordion', 'toastr', 'pikaday'
+]);
 
 app.filter('currencySymbol', filter.currencySymbolFilter);
 app.filter('unsafe', filter.unsafeFilter);
@@ -18,7 +32,5 @@ app.controller("myCtrl", function($scope) {
 	$scope.products = ["Milk", "Bread", "Cheese"];
 });
 
-app.config(['$stateProvider', ($stateProvider: StateProvider) => {
-	console.log('config');
-	console.log($stateProvider);
+app.config(['$routeProvider', ($routeProvider: ng.route.IRouteProvider) => {
 }]);

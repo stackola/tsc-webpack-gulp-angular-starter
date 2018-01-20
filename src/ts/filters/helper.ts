@@ -1,6 +1,6 @@
 'use strict';
 import * as ng from 'angular'
-import {IHash} from '../app';
+import {IHash} from '../common';
 
 export let currencySymbolFilter = [function()
 {
@@ -38,15 +38,15 @@ Filters.filter('translate', ['locale', function (locale) {
 }]);
 */
 
-export let unsafeFilter = ['$sce',function($sce: ng.ISCEService)
-{
-	return function (val: string) {
+export let unsafeFilter = ['$sce', ($sce: ng.ISCEService) => {
+	return (val: string) => {
 		return $sce.trustAsHtml(val);
 	};
 }];
 
-export let betOddFilter = [function() {
-	return function(val: string) {
+export let betOddFilter = [function()
+{
+	return (val: string) => {
 		return val;
 	};
 }];
