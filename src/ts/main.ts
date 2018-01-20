@@ -1,11 +1,12 @@
 "use strict";
 
 import * as angular from 'angular';
-import {StateProvider} from '@uirouter/angularjs';
+import uiRouter from "@uirouter/angularjs";
+import {StateProvider} from "@uirouter/angularjs";
 import {toggleDirective} from './directives/toggle';
 import * as filter from './filters/helper';
 
-const app = angular.module('app', ['ui.router']);
+const app = angular.module('app', [uiRouter]);
 
 app.filter('currencySymbol', filter.currencySymbolFilter);
 app.filter('unsafe', filter.unsafeFilter);
@@ -17,6 +18,7 @@ app.controller("myCtrl", function($scope) {
 	$scope.products = ["Milk", "Bread", "Cheese"];
 });
 
-app.config(['$stateProvider', function($stateProvider: StateProvider) {
-
+app.config(['$stateProvider', ($stateProvider: StateProvider) => {
+	console.log('config');
+	console.log($stateProvider);
 }]);
