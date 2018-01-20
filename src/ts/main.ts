@@ -1,11 +1,22 @@
-//for typescript compiler
-import * as angular from 'angular'
-import User from './User';
+"use strict";
 
+import * as angular from 'angular';
+import {StateProvider} from '@uirouter/angularjs';
+import {toggleDirective} from './directives/toggle';
+import * as filter from './filters/helper';
 
-var u = new User("Max");
-console.log(u.username);
-var app = angular.module("myShoppingList", []); 
+const app = angular.module('app', ['ui.router']);
+
+app.filter('currencySymbol', filter.currencySymbolFilter);
+app.filter('unsafe', filter.unsafeFilter);
+app.filter('betOdd', filter.betOddFilter);
+
+app.directive('ahToggle', toggleDirective);
+
 app.controller("myCtrl", function($scope) {
-    $scope.products = ["Milk", "Bread", "Cheese"];
+	$scope.products = ["Milk", "Bread", "Cheese"];
 });
+
+app.config(['$stateProvider', function($stateProvider: StateProvider) {
+
+}]);

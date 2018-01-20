@@ -12,6 +12,7 @@
     "@types/angular": "^1.6.40",
     "@types/angularjs": "^1.5.14-alpha",
     "@types/jquery": "^3.2.18",
+    "@uirouter/angularjs": "^1.0.13",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-es2015-destructuring": "^6.23.0",
